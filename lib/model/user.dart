@@ -23,9 +23,11 @@ class User {
       email: json['email'] as String? ?? '',
       firstName: json['first_name'] as String? ?? '',
       lastName: json['last_name'] as String? ?? '',
-      avatarURL: json['avatar'] as String? ?? '',
+      avatarURL: json['avatar'] as String? ?? ''
     );
   }
+
+
 
   int get id => _id;
   String? get email => _email;

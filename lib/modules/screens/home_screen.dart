@@ -16,10 +16,10 @@ class HomeScreen extends HookWidget {
     _getUsers() async {
       _isLoading.value = true;
       try {
-        final data = await userAPIService.getUsers();
-        _data.value = data;
+        final returnedData = await userAPIService.getUsers();
+        _data.value = returnedData;
       } catch (e) {
-        throw(e);
+        throw Exception(e);
       }
       _isLoading.value = false;
     }
@@ -34,7 +34,7 @@ class HomeScreen extends HookWidget {
       appBar: AppBar(
         title: const Text('REST API'),
       ),
-      body:Center(
+      body: Center(
         child: Builder(
           builder: (context) {
             if (_isLoading.value) {
