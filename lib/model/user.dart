@@ -1,4 +1,4 @@
-class User {
+class User{
   int _id;
   String? _email;
   String? _firstName;
